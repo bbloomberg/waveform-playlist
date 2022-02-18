@@ -622,7 +622,7 @@ export default class {
   soloTrack(track) {
     const index = this.soloedTracks.indexOf(track);
 
-    if (index > -1) {
+    if (index > -1 && !this.exclSolo) {
       this.soloedTracks.splice(index, 1);
     } else if (this.exclSolo) {
       this.soloedTracks = [track];
